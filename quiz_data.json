@@ -1,0 +1,25 @@
+{
+    "quizTitle": "カスタム単語クイズ",
+    "questions": [
+        {
+            "id": 1,
+            "definition": "「ありがとう」を英語で言うと？",
+            "word": "Thank you"
+        },
+        {
+            "id": 2,
+            "definition": "日本の首都は？",
+            "word": "東京"
+        },
+        {
+            "id": 3,
+            "definition": "1年は何日？ (平年)",
+            "word": "365"
+        },
+        {
+            "id": 4,
+            "definition": "「こんにちは」をフランス語で言うと？",
+            "word": "Bonjour"
+        }
+    ]
+}

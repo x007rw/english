@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英単語クイズ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .quiz-container {
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #f9fafb;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .definition-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.375rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e5e7eb;
+        }
+
+        .feedback {
+            min-height: 2.5rem;
+            font-weight: 500;
+        }
+
+        .correct {
+            color: #10b981;
+        }
+
+        .incorrect {
+            color: #ef4444;
+        }
+
+        .skipped {
+            color: #6b7280;
+        }
+
+        .info {
+            color: #3b82f6;
+        }
+
+        .completion-message {
+            text-align: center;
+            padding: 2rem;
+            background-color: #d1fae5;
+            color: #065f46;
+            border-radius: 0.375rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .answer-key-table {
+            width: 100%;
+            margin-top: 1.5rem;
+            border-collapse: collapse;
+        }
+
+        .answer-key-table th,
+        .answer-key-table td {
+            border: 1px solid #e5e7eb;
+            padding: 0.75rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+
+        .answer-key-table th {
+            background-color: #f3f4f6;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .button-group button {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen py-8">
+    <div class="quiz-container">
+        <h1 id="quiz-main-title" class="text-3xl font-bold text-center text-gray-700 mb-6">単語定義クイズ</h1>
+
+        <div id="quiz-controls" class="mb-4">
+            <div class="flex flex-col sm:flex-row sm:space-x-2 mb-3">
+                <button id="shuffle-button"
+                    class="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 mb-2 sm:mb-0">シャッフル</button>
+                <button id="reset-order-button"
+                    class="flex-1 bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 mb-2 sm:mb-0"
+                    disabled>順番に戻す</button>
+                <button id="show-results-button"
+                    class="flex-1 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400">結果を表示</button>
+            </div>
+            <div class="text-sm text-gray-600 text-center" id="progress-indicator"></div>
+        </div>
+
+        <div id="quiz-content">
+            <div class="definition-card">
+                <p class="text-lg text-gray-800" id="definition-text"></p>
+            </div>
+
+            <div class="mb-4">
+                <label for="answer-input" class="block text-sm font-medium text-gray-700 mb-1">あなたの答え (入力):</label>
+                <input type="text" id="answer-input"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+
+            <div class="button-group mb-4">
+                <button id="submit-button"
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    回答する
+                </button>
+                <button id="skip-button"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400">
+                    次の問題へ (スキップ)
+                </button>
+            </div>
+
+            <div id="feedback-message" class="mt-4 feedback text-center"></div>
+        </div>
+
+        <div id="completion-container" class="hidden">
+            <div class="completion-message">
+                <h2 id="completion-title" class="text-2xl font-semibold mb-2">クイズ完了！</h2>
+                <p id="final-score-message" class="text-lg"></p>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-700 mb-3 text-center">正誤表</h3>
+            <div class="overflow-x-auto">
+                <table id="answer-key-table" class="answer-key-table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>問題 (定義など)</th>
+                            <th>正解</th>
+                            <th>あなたの解答</th>
+                            <th>結果</th>
+                        </tr>
+                    </thead>
+                    <tbody id="answer-key-tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let initialQuizDataMaster = [];
+        let currentQuizTitle = "単語定義クイズ";
+
+        document.title = currentQuizTitle;
+        document.getElementById('quiz-main-title').textContent = currentQuizTitle;
+
+        let quizData = [];
+        let originalOrderData = [];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let isShuffled = false;
+
+        const definitionTextElement = document.getElementById('definition-text');
+        const answerInputElement = document.getElementById('answer-input');
+        const submitButton = document.getElementById('submit-button');
+        const skipButton = document.getElementById('skip-button');
+        const feedbackMessageElement = document.getElementById('feedback-message');
+        const progressIndicatorElement = document.getElementById('progress-indicator');
+
+        const quizContentElement = document.getElementById('quiz-content');
+        const completionContainerElement = document.getElementById('completion-container');
+        const completionTitleElement = document.getElementById('completion-title');
+        const finalScoreMessageElement = document.getElementById('final-score-message');
+        const answerKeyTbodyElement = document.getElementById('answer-key-tbody');
+
+        const shuffleButton = document.getElementById('shuffle-button');
+        const resetOrderButton = document.getElementById('reset-order-button');
+        const showResultsButton = document.getElementById('show-results-button');
+
+        function shuffleArray(array) {
+            let newArray = [...array];
+            for (let i = newArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+            }
+            return newArray;
+        }
+
+        function prepareQuizData(data) {
+            return data.map(item => ({ ...item, userAnswer: null, status: 'pending' }));
+        }
+
+        function initializeQuiz(useShuffled = false) {
+            if (initialQuizDataMaster.length === 0) {
+                quizContentElement.innerHTML = '<p class="text-center text-red-500 font-semibold">問題データが設定されていません。HTMLファイル内のJavaScriptで問題を設定してください。</p>';
+                document.getElementById('quiz-controls').classList.add('hidden');
+                return;
+            }
+
+            if (useShuffled) {
+                originalOrderData = prepareQuizData(initialQuizDataMaster);
+                quizData = shuffleArray(originalOrderData);
+                isShuffled = true;
+                shuffleButton.disabled = true;
+                resetOrderButton.disabled = false;
+            } else {
+                quizData = prepareQuizData(initialQuizDataMaster);
+                originalOrderData = [...quizData];
+                isShuffled = false;
+                shuffleButton.disabled = false;
+                resetOrderButton.disabled = true;
+            }
+
+            currentQuestionIndex = 0;
+            score = 0;
+
+            quizContentElement.classList.remove('hidden');
+            completionContainerElement.classList.add('hidden');
+            answerInputElement.disabled = false;
+            submitButton.disabled = false;
+            skipButton.disabled = false;
+            showResultsButton.disabled = false;
+
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            feedbackMessageElement.textContent = '';
+            feedbackMessageElement.className = 'mt-4 feedback text-center';
+
+            if (currentQuestionIndex < quizData.length) {
+                const currentQuestion = quizData[currentQuestionIndex];
+                definitionTextElement.textContent = currentQuestion.definition;
+                answerInputElement.value = '';
+                progressIndicatorElement.textContent = `問題 ${currentQuestionIndex + 1} / ${quizData.length}`;
+                answerInputElement.disabled = false;
+                submitButton.disabled = false;
+                skipButton.disabled = false;
+                answerInputElement.focus();
+            } else {
+                displayResults(false);
+            }
+        }
+
+        function handleAnswer(isCorrect, userAnswerText, skipped = false) {
+            const currentQuestion = quizData[currentQuestionIndex];
+            const correctAnswer = currentQuestion.word;
+
+            answerInputElement.disabled = true;
+            submitButton.disabled = true;
+            skipButton.disabled = true;
+
+            if (skipped) {
+                currentQuestion.status = 'skipped';
+                currentQuestion.userAnswer = '-';
+                feedbackMessageElement.innerHTML = `正解は「<strong class="font-bold">${correctAnswer}</strong>」でした。(スキップ)`;
+                feedbackMessageElement.className = 'mt-4 feedback text-center skipped';
+            } else if (isCorrect) {
+                currentQuestion.status = 'correct';
+                currentQuestion.userAnswer = userAnswerText;
+                score++;
+                feedbackMessageElement.textContent = '正解！';
+                feedbackMessageElement.className = 'mt-4 feedback text-center correct';
+            } else {
+                currentQuestion.status = 'incorrect';
+                currentQuestion.userAnswer = userAnswerText;
+                feedbackMessageElement.innerHTML = `不正解。正解は「<strong class="font-bold">${correctAnswer}</strong>」でした。`;
+                feedbackMessageElement.className = 'mt-4 feedback text-center incorrect';
+            }
+
+            currentQuestionIndex++;
+            setTimeout(() => {
+                loadQuestion();
+            }, skipped ? 2000 : 1500);
+        }
+
+        function checkAnswer() {
+            const userAnswer = answerInputElement.value.trim();
+            if (userAnswer === "") {
+                feedbackMessageElement.textContent = '答えを入力してください。';
+                feedbackMessageElement.className = 'mt-4 feedback text-center incorrect';
+                return;
+            }
+            const correctAnswer = quizData[currentQuestionIndex].word;
+            handleAnswer(userAnswer.toLowerCase() === correctAnswer.toLowerCase(), userAnswer);
+        }
+
+        function skipQuestion() {
+            handleAnswer(false, '', true);
+        }
+
+        function displayResults(interrupted = false) {
+            quizContentElement.classList.add('hidden');
+            completionContainerElement.classList.remove('hidden');
+            showResultsButton.disabled = true;
+
+            if (interrupted) {
+                completionTitleElement.textContent = "クイズ中断";
+            } else {
+                completionTitleElement.textContent = "クイズ完了！";
+            }
+            finalScoreMessageElement.innerHTML = `あなたのスコア: <strong class="text-xl">${score}</strong> / ${quizData.length} 問正解`;
+
+            answerKeyTbodyElement.innerHTML = '';
+
+            const dataForReport = isShuffled ? originalOrderData : quizData;
+
+            dataForReport.forEach((question, index) => {
+                let displayQuestion = question;
+                if (isShuffled) {
+                    const answeredQuestion = quizData.find(q => q.id === question.id);
+                    if (answeredQuestion) displayQuestion = answeredQuestion;
+                }
+
+                const row = answerKeyTbodyElement.insertRow();
+                row.insertCell().textContent = index + 1;
+                row.insertCell().textContent = displayQuestion.definition;
+                row.insertCell().textContent = displayQuestion.word;
+                row.insertCell().textContent = displayQuestion.userAnswer || '-';
+
+                const statusCell = row.insertCell();
+                let statusText = '';
+                let statusClass = '';
+
+                switch (displayQuestion.status) {
+                    case 'correct':
+                        statusText = '正解';
+                        statusClass = 'correct';
+                        break;
+                    case 'incorrect':
+                        statusText = '不正解';
+                        statusClass = 'incorrect';
+                        break;
+                    case 'skipped':
+                        statusText = 'スキップ';
+                        statusClass = 'skipped';
+                        break;
+                    default:
+                        statusText = '未解答';
+                        statusClass = 'text-gray-500';
+                }
+                statusCell.textContent = statusText;
+                statusCell.classList.add(statusClass, 'font-semibold');
+            });
+        }
+
+        submitButton.addEventListener('click', checkAnswer);
+        answerInputElement.addEventListener('keypress', function (event) {
+            if (event.key === 'Enter' && !submitButton.disabled) {
+                checkAnswer();
+            }
+        });
+        skipButton.addEventListener('click', skipQuestion);
+
+        shuffleButton.addEventListener('click', () => {
+            initializeQuiz(true);
+        });
+
+        resetOrderButton.addEventListener('click', () => {
+            initializeQuiz(false);
+        });
+
+        showResultsButton.addEventListener('click', () => {
+            displayResults(true);
+        });
+
+        fetch('quiz_data.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                currentQuizTitle = data.quizTitle || "単語定義クイズ";
+                document.title = currentQuizTitle;
+                document.getElementById('quiz-main-title').textContent = currentQuizTitle;
+
+                initialQuizDataMaster = data.questions;
+                initializeQuiz(false);
+            })
+            .catch(error => {
+                console.error('クイズデータの読み込みに失敗しました:', error);
+                document.getElementById('quiz-content').innerHTML = '<p class="text-center text-red-500 font-semibold">クイズデータの読み込みに失敗しました。quiz_data.jsonファイルが存在するか、形式が正しいか確認してください。</p>';
+                document.getElementById('quiz-controls').classList.add('hidden');
+            });
+    </script>
+</body>
+
+</html>
