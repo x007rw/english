@@ -1,25 +1,105 @@
 {
-    "quizTitle": "カスタム単語クイズ",
+    "quizTitle": "ターゲット1900",
     "questions": [
         {
             "id": 1,
-            "definition": "「ありがとう」を英語で言うと？",
-            "word": "Thank you"
+            "definition": "を創り出す、を引き起こす",
+            "word": "create"
         },
         {
             "id": 2,
-            "definition": "日本の首都は？",
-            "word": "東京"
+            "definition": "増加する、を増やす",
+            "word": "increase"
         },
         {
             "id": 3,
-            "definition": "1年は何日？ (平年)",
-            "word": "365"
+            "definition": "を向上させる、よくなる",
+            "word": "improve"
         },
         {
             "id": 4,
-            "definition": "「こんにちは」をフランス語で言うと？",
-            "word": "Bonjour"
+            "definition": "を意味する、するつもりである",
+            "word": "mean"
+        },
+        {
+            "id": 5,
+            "definition": "を所有している、事実や罪を認める",
+            "word": "own"
+        },
+        {
+            "id": 6,
+            "definition": "を含む",
+            "word": "include"
+        },
+        {
+            "id": 7,
+            "definition": "を見なす、について考える",
+            "word": "consider"
+        },
+        {
+            "id": 8,
+            "definition": "を許す、を与える、を考慮に入れる",
+            "word": "allow"
+        },
+        {
+            "id": 9,
+            "definition": "を提案する、を暗示する",
+            "word": "suggest"
+        },
+        {
+            "id": 10,
+            "definition": "を生産する、を取り出す",
+            "word": "produce"
+        },
+        {
+            "id": 11,
+            "definition": "を決める、に決着をつける",
+            "word": "decide"
+        },
+        {
+            "id": 12,
+            "definition": "を提供する、申し出る",
+            "word": "offer"
+        },
+        {
+            "id": 13,
+            "definition": "を要求する、を必要とする",
+            "word": "require"
+        },
+        {
+            "id": 14,
+            "definition": "を共有する、を分担する",
+            "word": "share"
+        },
+        {
+            "id": 15,
+            "definition": "を保存する、を蓄える",
+            "word": "store"
+        },
+        {
+            "id": 16,
+            "definition": "傾向がある、を世話する",
+            "word": "tend"
+        },
+        {
+            "id": 17,
+            "definition": "心配している、に関係する、に関連する",
+            "word": "concern"
+        },
+        {
+            "id": 18,
+            "definition": "について述べる、を説明する",
+            "word": "describe"
+        },
+        {
+            "id": 19,
+            "definition": "を関与させる、を伴う",
+            "word": "involve"
+        },
+        {
+            "id": 20,
+            "definition": "を減らす、に変える",
+            "word": "reduce"
         }
     ]
 }

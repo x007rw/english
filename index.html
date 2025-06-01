@@ -106,6 +106,21 @@
                 <button id="show-results-button"
                     class="flex-1 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400">結果を表示</button>
             </div>
+            <div class="flex flex-col sm:flex-row sm:space-x-2 mb-3">
+                <div class="flex-1 mb-2 sm:mb-0">
+                    <label for="start-range" class="block text-sm font-medium text-gray-700">開始問題番号:</label>
+                    <input type="number" id="start-range" min="1" value="1"
+                        class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+                <div class="flex-1 mb-2 sm:mb-0">
+                    <label for="end-range" class="block text-sm font-medium text-gray-700">終了問題番号:</label>
+                    <input type="number" id="end-range" min="1"
+                        class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+                <button id="apply-range-button"
+                    class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">範囲を適用</button>
+            </div>
+            <div id="range-feedback-message" class="text-sm text-red-500 text-center mt-2"></div>
             <div class="text-sm text-gray-600 text-center" id="progress-indicator"></div>
         </div>
 
@@ -190,6 +205,12 @@
         const resetOrderButton = document.getElementById('reset-order-button');
         const showResultsButton = document.getElementById('show-results-button');
 
+        // 新しく追加された範囲指定UI要素の参照
+        const startRangeInput = document.getElementById('start-range');
+        const endRangeInput = document.getElementById('end-range');
+        const applyRangeButton = document.getElementById('apply-range-button');
+        const rangeFeedbackMessageElement = document.getElementById('range-feedback-message');
+
         function shuffleArray(array) {
             let newArray = [...array];
             for (let i = newArray.length - 1; i > 0; i--) {
@@ -205,19 +226,60 @@
 
         function initializeQuiz(useShuffled = false) {
             if (initialQuizDataMaster.length === 0) {
-                quizContentElement.innerHTML = '<p class="text-center text-red-500 font-semibold">問題データが設定されていません。HTMLファイル内のJavaScriptで問題を設定してください。</p>';
+                quizContentElement.innerHTML = '<p class="text-center text-red-500 font-semibold">問題データが設定されていません。</p>';
                 document.getElementById('quiz-controls').classList.add('hidden');
                 return;
             }
 
+            // 問題範囲の適用ロジック
+            let filteredQuizData = [...initialQuizDataMaster]; 
+
+            const startRange = parseInt(startRangeInput.value);
+            const endRange = parseInt(endRangeInput.value);
+            
+            rangeFeedbackMessageElement.textContent = ''; 
+
+            if (!isNaN(startRange) && !isNaN(endRange)) {
+                if (startRange < 1 || endRange < 1) {
+                    rangeFeedbackMessageElement.textContent = '問題番号は1以上で指定してください。';
+                    return;
+                }
+                if (startRange > endRange) {
+                    rangeFeedbackMessageElement.textContent = '開始問題番号は終了問題番号以下にしてください。';
+                    return;
+                }
+                if (startRange > initialQuizDataMaster.length || endRange > initialQuizDataMaster.length) {
+                    rangeFeedbackMessageElement.textContent = `問題番号は総問題数 (${initialQuizDataMaster.length}) 以内で指定してください。`;
+                    return;
+                }
+                
+                // 配列のインデックスは0から始まるため、-1する
+                filteredQuizData = initialQuizDataMaster.slice(startRange - 1, endRange);
+            } else if (!isNaN(startRange) && isNaN(endRange)) {
+                 // 開始のみ指定された場合、その問題から最後まで
+                if (startRange < 1 || startRange > initialQuizDataMaster.length) {
+                    rangeFeedbackMessageElement.textContent = `開始問題番号は1から総問題数 (${initialQuizDataMaster.length}) の間で指定してください。`;
+                    return;
+                }
+                filteredQuizData = initialQuizDataMaster.slice(startRange - 1);
+            } else if (isNaN(startRange) && !isNaN(endRange)) {
+                // 終了のみ指定された場合、1からその問題まで
+                if (endRange < 1 || endRange > initialQuizDataMaster.length) {
+                    rangeFeedbackMessageElement.textContent = `終了問題番号は1から総問題数 (${initialQuizDataMaster.length}) の間で指定してください。`;
+                    return;
+                }
+                filteredQuizData = initialQuizDataMaster.slice(0, endRange);
+            }
+
+
             if (useShuffled) {
-                originalOrderData = prepareQuizData(initialQuizDataMaster);
+                originalOrderData = prepareQuizData(filteredQuizData); 
                 quizData = shuffleArray(originalOrderData);
                 isShuffled = true;
                 shuffleButton.disabled = true;
                 resetOrderButton.disabled = false;
             } else {
-                quizData = prepareQuizData(initialQuizDataMaster);
+                quizData = prepareQuizData(filteredQuizData); 
                 originalOrderData = [...quizData];
                 isShuffled = false;
                 shuffleButton.disabled = false;
@@ -316,26 +378,19 @@
 
             answerKeyTbodyElement.innerHTML = '';
 
-            const dataForReport = isShuffled ? originalOrderData : quizData;
-
-            dataForReport.forEach((question, index) => {
-                let displayQuestion = question;
-                if (isShuffled) {
-                    const answeredQuestion = quizData.find(q => q.id === question.id);
-                    if (answeredQuestion) displayQuestion = answeredQuestion;
-                }
-
+            // 常にquizData（出題された順序）をループするように変更
+            quizData.forEach((question, index) => {
                 const row = answerKeyTbodyElement.insertRow();
-                row.insertCell().textContent = index + 1;
-                row.insertCell().textContent = displayQuestion.definition;
-                row.insertCell().textContent = displayQuestion.word;
-                row.insertCell().textContent = displayQuestion.userAnswer || '-';
+                row.insertCell().textContent = index + 1; 
+                row.insertCell().textContent = question.definition; 
+                row.insertCell().textContent = question.word;       
+                row.insertCell().textContent = question.userAnswer || '-'; 
 
                 const statusCell = row.insertCell();
                 let statusText = '';
                 let statusClass = '';
 
-                switch (displayQuestion.status) {
+                switch (question.status) {
                     case 'correct':
                         statusText = '正解';
                         statusClass = 'correct';
@@ -377,6 +432,12 @@
             displayResults(true);
         });
 
+        // 範囲適用ボタンのイベントリスナー
+        applyRangeButton.addEventListener('click', () => {
+            // 範囲適用時はシャッフルを解除し、元の順序で初期化
+            initializeQuiz(false); 
+        });
+
         fetch('quiz_data.json')
             .then(response => {
                 if (!response.ok) {
@@ -385,11 +446,13 @@
                 return response.json();
             })
             .then(data => {
-                currentQuizTitle = data.quizTitle || "単語定義クイズ";
+                currentQuizTitle = data.quizTitle || "単語定義クイズ"; 
                 document.title = currentQuizTitle;
                 document.getElementById('quiz-main-title').textContent = currentQuizTitle;
-
-                initialQuizDataMaster = data.questions;
+                
+                initialQuizDataMaster = data.questions; 
+                // JSON読み込み後に終了問題番号のデフォルト値を設定
+                endRangeInput.value = initialQuizDataMaster.length;
                 initializeQuiz(false);
             })
             .catch(error => {
