@@ -1,105 +1,180 @@
 {
-    "quizTitle": "ターゲット1900",
+    "quizTitle": "English",
     "questions": [
         {
             "id": 1,
-            "definition": "を創り出す、を引き起こす",
-            "word": "create"
+            "definition": "a successful completion of a task",
+            "word": "achievement"
         },
         {
             "id": 2,
-            "definition": "増加する、を増やす",
-            "word": "increase"
+            "definition": "an effort or a try",
+            "word": "attempt"
         },
         {
             "id": 3,
-            "definition": "を向上させる、よくなる",
-            "word": "improve"
+            "definition": "a task that is difficult to do",
+            "word": "challenge"
         },
         {
             "id": 4,
-            "definition": "を意味する、するつもりである",
-            "word": "mean"
+            "definition": "to think carefully about something",
+            "word": "concentrate"
         },
         {
             "id": 5,
-            "definition": "を所有している、事実や罪を認める",
-            "word": "own"
+            "definition": "to take someone's attention away",
+            "word": "distract"
         },
         {
             "id": 6,
-            "definition": "を含む",
-            "word": "include"
+            "definition": "amazing",
+            "word": "incredible"
         },
         {
             "id": 7,
-            "definition": "を見なす、について考える",
-            "word": "consider"
+            "definition": "causing a feeling of wanting to do something",
+            "word": "inspiring"
         },
         {
             "id": 8,
-            "definition": "を許す、を与える、を考慮に入れる",
-            "word": "allow"
+            "definition": "to make someone feel that they have to do something",
+            "word": "put pressure on"
         },
         {
             "id": 9,
-            "definition": "を提案する、を暗示する",
-            "word": "suggest"
+            "definition": "a chance of losing something important",
+            "word": "risk"
         },
         {
             "id": 10,
-            "definition": "を生産する、を取り出す",
-            "word": "produce"
+            "definition": "causing strong feelings of fear",
+            "word": "scary"
         },
         {
             "id": 11,
-            "definition": "を決める、に決着をつける",
-            "word": "decide"
+            "definition": "驚くべき、すばらしい",
+            "word": "amazing"
         },
         {
             "id": 12,
-            "definition": "を提供する、申し出る",
-            "word": "offer"
+            "definition": "賞",
+            "word": "award"
         },
         {
             "id": 13,
-            "definition": "を要求する、を必要とする",
-            "word": "require"
+            "definition": "～のために、～のせいで",
+            "word": "because of"
         },
         {
             "id": 14,
-            "definition": "を共有する、を分担する",
-            "word": "share"
+            "definition": "脳",
+            "word": "brain"
         },
         {
             "id": 15,
-            "definition": "を保存する、を蓄える",
-            "word": "store"
+            "definition": "（～に）…させる",
+            "word": "cause ~ to do"
         },
         {
             "id": 16,
-            "definition": "傾向がある、を世話する",
-            "word": "tend"
+            "definition": "映画撮影技師、カメラマン",
+            "word": "cinematographer"
         },
         {
             "id": 17,
-            "definition": "心配している、に関係する、に関連する",
-            "word": "concern"
+            "definition": "～に登る",
+            "word": "climb"
         },
         {
             "id": 18,
-            "definition": "について述べる、を説明する",
-            "word": "describe"
+            "definition": "競技(会)",
+            "word": "competition"
         },
         {
             "id": 19,
-            "definition": "を関与させる、を伴う",
-            "word": "involve"
+            "definition": "完成、完了",
+            "word": "completion"
         },
         {
             "id": 20,
-            "definition": "を減らす、に変える",
-            "word": "reduce"
+            "definition": "葛藤がある",
+            "word": "conflicted"
+        },
+        {
+            "id": 21,
+            "definition": "（必然の）結果",
+            "word": "consequence"
+        },
+        {
+            "id": 22,
+            "definition": "満足している",
+            "word": "content"
+        },
+        {
+            "id": 23,
+            "definition": "言葉で述べる、説明する",
+            "word": "describe"
+        },
+        {
+            "id": 24,
+            "definition": "理解する、つかむ",
+            "word": "grasp"
+        },
+        {
+            "id": 25,
+            "definition": "想像する",
+            "word": "imagine"
+        },
+        {
+            "id": 26,
+            "definition": "目を背ける",
+            "word": "look away"
+        },
+        {
+            "id": 27,
+            "definition": "はらはらさせる、心配させる",
+            "word": "nail-biting"
+        },
+        {
+            "id": 28,
+            "definition": "狭い",
+            "word": "narrow"
+        },
+        {
+            "id": 29,
+            "definition": "後悔する",
+            "word": "regret"
+        },
+        {
+            "id": 30,
+            "definition": "結果",
+            "word": "result"
+        },
+        {
+            "id": 31,
+            "definition": "part of a movie in which events happen in the same place",
+            "word": "scene"
+        },
+        {
+            "id": 32,
+            "definition": "くしゃみ",
+            "word": "sneeze"
+        },
+        {
+            "id": 33,
+            "definition": "表面、外面",
+            "word": "surface"
+        },
+        {
+            "id": 34,
+            "definition": "さまざまな",
+            "word": "various"
+        },
+        {
+            "id": 35,
+            "definition": "ability to think quickly",
+            "word": "wit"
         }
     ]
 }
