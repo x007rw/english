@@ -232,12 +232,12 @@
             }
 
             // 問題範囲の適用ロジック
-            let filteredQuizData = [...initialQuizDataMaster]; 
+            let filteredQuizData = [...initialQuizDataMaster];
 
             const startRange = parseInt(startRangeInput.value);
             const endRange = parseInt(endRangeInput.value);
-            
-            rangeFeedbackMessageElement.textContent = ''; 
+
+            rangeFeedbackMessageElement.textContent = '';
 
             if (!isNaN(startRange) && !isNaN(endRange)) {
                 if (startRange < 1 || endRange < 1) {
@@ -252,11 +252,11 @@
                     rangeFeedbackMessageElement.textContent = `問題番号は総問題数 (${initialQuizDataMaster.length}) 以内で指定してください。`;
                     return;
                 }
-                
+
                 // 配列のインデックスは0から始まるため、-1する
                 filteredQuizData = initialQuizDataMaster.slice(startRange - 1, endRange);
             } else if (!isNaN(startRange) && isNaN(endRange)) {
-                 // 開始のみ指定された場合、その問題から最後まで
+                // 開始のみ指定された場合、その問題から最後まで
                 if (startRange < 1 || startRange > initialQuizDataMaster.length) {
                     rangeFeedbackMessageElement.textContent = `開始問題番号は1から総問題数 (${initialQuizDataMaster.length}) の間で指定してください。`;
                     return;
@@ -273,13 +273,13 @@
 
 
             if (useShuffled) {
-                originalOrderData = prepareQuizData(filteredQuizData); 
+                originalOrderData = prepareQuizData(filteredQuizData);
                 quizData = shuffleArray(originalOrderData);
                 isShuffled = true;
                 shuffleButton.disabled = true;
                 resetOrderButton.disabled = false;
             } else {
-                quizData = prepareQuizData(filteredQuizData); 
+                quizData = prepareQuizData(filteredQuizData);
                 originalOrderData = [...quizData];
                 isShuffled = false;
                 shuffleButton.disabled = false;
@@ -381,10 +381,10 @@
             // 常にquizData（出題された順序）をループするように変更
             quizData.forEach((question, index) => {
                 const row = answerKeyTbodyElement.insertRow();
-                row.insertCell().textContent = index + 1; 
-                row.insertCell().textContent = question.definition; 
-                row.insertCell().textContent = question.word;       
-                row.insertCell().textContent = question.userAnswer || '-'; 
+                row.insertCell().textContent = index + 1;
+                row.insertCell().textContent = question.definition;
+                row.insertCell().textContent = question.word;
+                row.insertCell().textContent = question.userAnswer || '-';
 
                 const statusCell = row.insertCell();
                 let statusText = '';
@@ -435,7 +435,7 @@
         // 範囲適用ボタンのイベントリスナー
         applyRangeButton.addEventListener('click', () => {
             // 範囲適用時はシャッフルを解除し、元の順序で初期化
-            initializeQuiz(false); 
+            initializeQuiz(false);
         });
 
         fetch('quiz_data.json')
@@ -446,11 +446,11 @@
                 return response.json();
             })
             .then(data => {
-                currentQuizTitle = data.quizTitle || "単語定義クイズ"; 
+                currentQuizTitle = data.quizTitle || "単語定義クイズ";
                 document.title = currentQuizTitle;
                 document.getElementById('quiz-main-title').textContent = currentQuizTitle;
-                
-                initialQuizDataMaster = data.questions; 
+
+                initialQuizDataMaster = data.questions;
                 // JSON読み込み後に終了問題番号のデフォルト値を設定
                 endRangeInput.value = initialQuizDataMaster.length;
                 initializeQuiz(false);

@@ -1,180 +1,180 @@
 {
-    "quizTitle": "English",
+    "quizTitle": "English Vocabulary List",
     "questions": [
         {
             "id": 1,
-            "definition": "a successful completion of a task",
-            "word": "achievement"
+            "definition": "yearly",
+            "word": "annual"
         },
         {
             "id": 2,
-            "definition": "an effort or a try",
-            "word": "attempt"
+            "definition": "to mix",
+            "word": "combine"
         },
         {
             "id": 3,
-            "definition": "a task that is difficult to do",
-            "word": "challenge"
+            "definition": "to design or create",
+            "word": "develop"
         },
         {
             "id": 4,
-            "definition": "to think carefully about something",
-            "word": "concentrate"
+            "definition": "a show of how you think or feel",
+            "word": "expression"
         },
         {
             "id": 5,
-            "definition": "to take someone's attention away",
-            "word": "distract"
+            "definition": "known to you",
+            "word": "familiar"
         },
         {
             "id": 6,
-            "definition": "amazing",
-            "word": "incredible"
+            "definition": "opportunity",
+            "word": "possibility"
         },
         {
             "id": 7,
-            "definition": "causing a feeling of wanting to do something",
-            "word": "inspiring"
+            "definition": "relating to a job that requires training or education",
+            "word": "professional"
         },
         {
             "id": 8,
-            "definition": "to make someone feel that they have to do something",
-            "word": "put pressure on"
+            "definition": "how good something is",
+            "word": "quality"
         },
         {
             "id": 9,
-            "definition": "a chance of losing something important",
-            "word": "risk"
+            "definition": "clearly defined",
+            "word": "specific"
         },
         {
             "id": 10,
-            "definition": "causing strong feelings of fear",
-            "word": "scary"
+            "definition": "a type of work that you are trained to do such as plumbing, construction, etc.",
+            "word": "trade"
         },
         {
             "id": 11,
-            "definition": "驚くべき、すばらしい",
-            "word": "amazing"
+            "definition": "relating to sound",
+            "word": "acoustic"
         },
         {
             "id": 12,
-            "definition": "賞",
-            "word": "award"
+            "definition": "進歩する",
+            "word": "advance"
         },
         {
             "id": 13,
-            "definition": "～のために、～のせいで",
-            "word": "because of"
+            "definition": "the process of making films that have pictures or objects that seem to move",
+            "word": "animation"
         },
         {
             "id": 14,
-            "definition": "脳",
-            "word": "brain"
+            "definition": "objects that were made in the past and are important to history",
+            "word": "artifact"
         },
         {
             "id": 15,
-            "definition": "（～に）…させる",
-            "word": "cause ~ to do"
+            "definition": "利用できる、求めに応じられる",
+            "word": "available"
         },
         {
             "id": 16,
-            "definition": "映画撮影技師、カメラマン",
-            "word": "cinematographer"
+            "definition": "average",
+            "word": "average"
         },
         {
             "id": 17,
-            "definition": "～に登る",
-            "word": "climb"
+            "definition": "～を確かめる",
+            "word": "check out"
         },
         {
             "id": 18,
-            "definition": "競技(会)",
-            "word": "competition"
+            "definition": "コンピュータ(使用)の",
+            "word": "computing"
         },
         {
             "id": 19,
-            "definition": "完成、完了",
-            "word": "completion"
+            "definition": "建設",
+            "word": "construction"
         },
         {
             "id": 20,
-            "definition": "葛藤がある",
-            "word": "conflicted"
+            "definition": "定義する、限定する、明らかにする",
+            "word": "define"
         },
         {
             "id": 21,
-            "definition": "（必然の）結果",
-            "word": "consequence"
+            "definition": "開発者",
+            "word": "developer"
         },
         {
             "id": 22,
-            "definition": "満足している",
-            "word": "content"
+            "definition": "教育",
+            "word": "education"
         },
         {
             "id": 23,
-            "definition": "言葉で述べる、説明する",
-            "word": "describe"
+            "definition": "産業の",
+            "word": "industrial"
         },
         {
             "id": 24,
-            "definition": "理解する、つかむ",
-            "word": "grasp"
+            "definition": "投資する",
+            "word": "invest"
         },
         {
             "id": 25,
-            "definition": "想像する",
-            "word": "imagine"
+            "definition": "知識",
+            "word": "knowledge"
         },
         {
             "id": 26,
-            "definition": "目を背ける",
-            "word": "look away"
+            "definition": "確かめる",
+            "word": "make sure"
         },
         {
             "id": 27,
-            "definition": "はらはらさせる、心配させる",
-            "word": "nail-biting"
+            "definition": "機会、好機",
+            "word": "opportunity"
         },
         {
             "id": 28,
-            "definition": "狭い",
-            "word": "narrow"
+            "definition": "情熱、強い好み",
+            "word": "passion"
         },
         {
             "id": 29,
-            "definition": "後悔する",
-            "word": "regret"
+            "definition": "物理学",
+            "word": "physics"
         },
         {
             "id": 30,
-            "definition": "結果",
-            "word": "result"
+            "definition": "配管工事",
+            "word": "plumbing"
         },
         {
             "id": 31,
-            "definition": "part of a movie in which events happen in the same place",
-            "word": "scene"
+            "definition": "過程",
+            "word": "process"
         },
         {
             "id": 32,
-            "definition": "くしゃみ",
-            "word": "sneeze"
+            "definition": "修繕する、修理する",
+            "word": "repair"
         },
         {
             "id": 33,
-            "definition": "表面、外面",
-            "word": "surface"
+            "definition": "要求する",
+            "word": "require"
         },
         {
             "id": 34,
-            "definition": "さまざまな",
-            "word": "various"
+            "definition": "科学の",
+            "word": "scientific"
         },
         {
             "id": 35,
-            "definition": "ability to think quickly",
-            "word": "wit"
+            "definition": "彫刻",
+            "word": "sculpture"
         }
     ]
 }
