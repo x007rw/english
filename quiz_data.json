@@ -3,503 +3,503 @@
     "questions": [
         {
             "id": 1,
-            "definition": "提供する",
-            "word": "provide"
+            "definition": "provide",
+            "word": "提供する"
         },
         {
             "id": 2,
-            "definition": "商人",
-            "word": "merchant"
+            "definition": "merchant",
+            "word": "商人"
         },
         {
             "id": 3,
-            "definition": "針",
-            "word": "needle"
+            "definition": "needle",
+            "word": "針"
         },
         {
             "id": 4,
-            "definition": "締める",
-            "word": "fasten"
+            "definition": "fasten",
+            "word": "締める"
         },
         {
             "id": 5,
-            "definition": "精神の",
-            "word": "mental"
+            "definition": "mental",
+            "word": "精神の"
         },
         {
             "id": 6,
-            "definition": "反対する",
-            "word": "object"
+            "definition": "object",
+            "word": "反対する"
         },
         {
             "id": 7,
-            "definition": "生産する",
-            "word": "produce"
+            "definition": "produce",
+            "word": "生産する"
         },
         {
             "id": 8,
-            "definition": "進展",
-            "word": "progress"
+            "definition": "progress",
+            "word": "進展"
         },
         {
             "id": 9,
-            "definition": "終わった",
-            "word": "finished"
+            "definition": "finished",
+            "word": "終わった"
         },
         {
             "id": 10,
-            "definition": "酸素",
-            "word": "oxygen"
+            "definition": "oxygen",
+            "word": "酸素"
         },
         {
             "id": 11,
-            "definition": "生きている",
-            "word": "alive"
+            "definition": "alive",
+            "word": "生きている"
         },
         {
             "id": 12,
-            "definition": "所有する",
-            "word": "own"
+            "definition": "own",
+            "word": "所有する"
         },
         {
             "id": 13,
-            "definition": "推薦する",
-            "word": "recommend"
+            "definition": "recommend",
+            "word": "推薦する"
         },
         {
             "id": 14,
-            "definition": "外交",
-            "word": "diplomacy"
+            "definition": "diplomacy",
+            "word": "外交"
         },
         {
             "id": 15,
-            "definition": "降雨",
-            "word": "rainfall"
+            "definition": "rainfall",
+            "word": "降雨"
         },
         {
             "id": 16,
-            "definition": "上がる",
-            "word": "rise"
+            "definition": "rise",
+            "word": "上がる"
         },
         {
             "id": 17,
-            "definition": "賞賛に値する",
-            "word": "admirable"
+            "definition": "admirable",
+            "word": "賞賛に値する"
         },
         {
             "id": 18,
-            "definition": "構造",
-            "word": "structure"
+            "definition": "structure",
+            "word": "構造"
         },
         {
             "id": 19,
-            "definition": "階上へ",
-            "word": "upstairs"
+            "definition": "upstairs",
+            "word": "階上へ"
         },
         {
             "id": 20,
-            "definition": "観測所",
-            "word": "observatory"
+            "definition": "observatory",
+            "word": "観測所"
         },
         {
             "id": 21,
-            "definition": "草食動物",
-            "word": "herbivore"
+            "definition": "herbivore",
+            "word": "草食動物"
         },
         {
             "id": 22,
-            "definition": "運動する",
-            "word": "exercise"
+            "definition": "exercise",
+            "word": "運動する"
         },
         {
             "id": 23,
-            "definition": "溶岩",
-            "word": "lava"
+            "definition": "lava",
+            "word": "溶岩"
         },
         {
             "id": 24,
-            "definition": "領地",
-            "word": "territory"
+            "definition": "territory",
+            "word": "領地"
         },
         {
             "id": 25,
-            "definition": "想像する",
-            "word": "imagine"
+            "definition": "imagine",
+            "word": "想像する"
         },
         {
             "id": 26,
-            "definition": "使用法",
-            "word": "usage"
+            "definition": "usage",
+            "word": "使用法"
         },
         {
             "id": 27,
-            "definition": "穀物",
-            "word": "grain"
+            "definition": "grain",
+            "word": "穀物"
         },
         {
             "id": 28,
-            "definition": "採用する",
-            "word": "adopt"
+            "definition": "adopt",
+            "word": "採用する"
         },
         {
             "id": 29,
-            "definition": "投資",
-            "word": "investment"
+            "definition": "investment",
+            "word": "投資"
         },
         {
             "id": 30,
-            "definition": "申し入れ",
-            "word": "proposal"
+            "definition": "proposal",
+            "word": "申し入れ"
         },
         {
             "id": 31,
-            "definition": "道具",
-            "word": "tool"
+            "definition": "tool",
+            "word": "道具"
         },
         {
             "id": 32,
-            "definition": "振動",
-            "word": "vibration"
+            "definition": "vibration",
+            "word": "振動"
         },
         {
             "id": 33,
-            "definition": "前の",
-            "word": "previous"
+            "definition": "previous",
+            "word": "前の"
         },
         {
             "id": 34,
-            "definition": "扱い",
-            "word": "treatment"
+            "definition": "treatment",
+            "word": "扱い"
         },
         {
             "id": 35,
-            "definition": "はさみ",
-            "word": "scissors"
+            "definition": "scissors",
+            "word": "はさみ"
         },
         {
             "id": 36,
-            "definition": "暖炉",
-            "word": "fireplace"
+            "definition": "fireplace",
+            "word": "暖炉"
         },
         {
             "id": 37,
-            "definition": "人々",
-            "word": "folk"
+            "definition": "folk",
+            "word": "人々"
         },
         {
             "id": 38,
-            "definition": "巻き込む",
-            "word": "involve"
+            "definition": "involve",
+            "word": "巻き込む"
         },
         {
             "id": 39,
-            "definition": "詩人",
-            "word": "poet"
+            "definition": "poet",
+            "word": "詩人"
         },
         {
             "id": 40,
-            "definition": "乗客",
-            "word": "passenger"
+            "definition": "passenger",
+            "word": "乗客"
         },
         {
             "id": 41,
-            "definition": "賃金",
-            "word": "wage"
+            "definition": "wage",
+            "word": "賃金"
         },
         {
             "id": 42,
-            "definition": "先祖",
-            "word": "ancestor"
+            "definition": "ancestor",
+            "word": "先祖"
         },
         {
             "id": 43,
-            "definition": "さえぎる",
-            "word": "interrupt"
+            "definition": "interrupt",
+            "word": "さえぎる"
         },
         {
             "id": 44,
-            "definition": "銀行",
-            "word": "bank"
+            "definition": "bank",
+            "word": "銀行"
         },
         {
             "id": 45,
-            "definition": "回復する",
-            "word": "recover"
+            "definition": "recover",
+            "word": "回復する"
         },
         {
             "id": 46,
-            "definition": "刻む",
-            "word": "carve"
+            "definition": "carve",
+            "word": "刻む"
         },
         {
             "id": 47,
-            "definition": "叫ぶ",
-            "word": "exclaim"
+            "definition": "exclaim",
+            "word": "叫ぶ"
         },
         {
             "id": 48,
-            "definition": "ハーブ",
-            "word": "herb"
+            "definition": "herb",
+            "word": "ハーブ"
         },
         {
             "id": 49,
-            "definition": "躊躇する",
-            "word": "hesitate"
+            "definition": "hesitate",
+            "word": "躊躇する"
         },
         {
             "id": 50,
-            "definition": "X線",
-            "word": "X-ray"
+            "definition": "X-ray",
+            "word": "X線"
         },
         {
             "id": 51,
-            "definition": "草",
-            "word": "grass"
+            "definition": "grass",
+            "word": "草"
         },
         {
             "id": 52,
-            "definition": "着手する",
-            "word": "undertake"
+            "definition": "undertake",
+            "word": "着手する"
         },
         {
             "id": 53,
-            "definition": "認識する",
-            "word": "recognize"
+            "definition": "recognize",
+            "word": "認識する"
         },
         {
             "id": 54,
-            "definition": "成し遂げる",
-            "word": "accomplish"
+            "definition": "accomplish",
+            "word": "成し遂げる"
         },
         {
             "id": 55,
-            "definition": "好きな",
-            "word": "fond"
+            "definition": "fond",
+            "word": "好きな"
         },
         {
             "id": 56,
-            "definition": "傾向がある",
-            "word": "tend"
+            "definition": "tend",
+            "word": "傾向がある"
         },
         {
             "id": 57,
-            "definition": "議論",
-            "word": "discussion"
+            "definition": "discussion",
+            "word": "議論"
         },
         {
             "id": 58,
-            "definition": "湿気のある",
-            "word": "humid"
+            "definition": "humid",
+            "word": "湿気のある"
         },
         {
             "id": 59,
-            "definition": "島",
-            "word": "island"
+            "definition": "island",
+            "word": "島"
         },
         {
             "id": 60,
-            "definition": "永久的な",
-            "word": "permanent"
+            "definition": "permanent",
+            "word": "永久的な"
         },
         {
             "id": 61,
-            "definition": "学者",
-            "word": "scholar"
+            "definition": "scholar",
+            "word": "学者"
         },
         {
             "id": 62,
-            "definition": "後ほど",
-            "word": "later"
+            "definition": "later",
+            "word": "後ほど"
         },
         {
             "id": 63,
-            "definition": "洗練された",
-            "word": "fine"
+            "definition": "fine",
+            "word": "洗練された"
         },
         {
             "id": 64,
-            "definition": "炭素",
-            "word": "carbon"
+            "definition": "carbon",
+            "word": "炭素"
         },
         {
             "id": 65,
-            "definition": "決定",
-            "word": "decision"
+            "definition": "decision",
+            "word": "決定"
         },
         {
             "id": 66,
-            "definition": "広い",
-            "word": "broad"
+            "definition": "broad",
+            "word": "広い"
         },
         {
             "id": 67,
-            "definition": "凍る",
-            "word": "freeze"
+            "definition": "freeze",
+            "word": "凍る"
         },
         {
             "id": 68,
-            "definition": "創造的な",
-            "word": "creative"
+            "definition": "creative",
+            "word": "創造的な"
         },
         {
             "id": 69,
-            "definition": "さらに",
-            "word": "furthermore"
+            "definition": "furthermore",
+            "word": "さらに"
         },
         {
             "id": 70,
-            "definition": "十分な",
-            "word": "sufficient"
+            "definition": "sufficient",
+            "word": "十分な"
         },
         {
             "id": 71,
-            "definition": "豊富な",
-            "word": "affluent"
+            "definition": "affluent",
+            "word": "豊富な"
         },
         {
             "id": 72,
-            "definition": "増加する",
-            "word": "increase"
+            "definition": "increase",
+            "word": "増加する"
         },
         {
             "id": 73,
-            "definition": "にこやかに",
-            "word": "cheerfully"
+            "definition": "cheerfully",
+            "word": "にこやかに"
         },
         {
             "id": 74,
-            "definition": "ほとんど",
-            "word": "nearly"
+            "definition": "nearly",
+            "word": "ほとんど"
         },
         {
             "id": 75,
-            "definition": "水をやる",
-            "word": "water"
+            "definition": "water",
+            "word": "水をやる"
         },
         {
             "id": 76,
-            "definition": "技能",
-            "word": "skill"
+            "definition": "skill",
+            "word": "技能"
         },
         {
             "id": 77,
-            "definition": "病気",
-            "word": "illness"
+            "definition": "illness",
+            "word": "病気"
         },
         {
             "id": 78,
-            "definition": "投票する",
-            "word": "vote"
+            "definition": "vote",
+            "word": "投票する"
         },
         {
             "id": 79,
-            "definition": "のこぎり",
-            "word": "saw"
+            "definition": "saw",
+            "word": "のこぎり"
         },
         {
             "id": 80,
-            "definition": "本当に",
-            "word": "indeed"
+            "definition": "indeed",
+            "word": "本当に"
         },
         {
             "id": 81,
-            "definition": "要求する",
-            "word": "require"
+            "definition": "require",
+            "word": "要求する"
         },
         {
             "id": 82,
-            "definition": "記述する",
-            "word": "describe"
+            "definition": "describe",
+            "word": "記述する"
         },
         {
             "id": 83,
-            "definition": "小包",
-            "word": "parcel"
+            "definition": "parcel",
+            "word": "小包"
         },
         {
             "id": 84,
-            "definition": "明らかな",
-            "word": "apparent"
+            "definition": "apparent",
+            "word": "明らかな"
         },
         {
             "id": 85,
-            "definition": "公式の",
-            "word": "official"
+            "definition": "official",
+            "word": "公式の"
         },
         {
             "id": 86,
-            "definition": "海軍",
-            "word": "navy"
+            "definition": "navy",
+            "word": "海軍"
         },
         {
             "id": 87,
-            "definition": "署名する",
-            "word": "sign"
+            "definition": "sign",
+            "word": "署名する"
         },
         {
             "id": 88,
-            "definition": "匂い",
-            "word": "odor"
+            "definition": "odor",
+            "word": "匂い"
         },
         {
             "id": 89,
-            "definition": "香り",
-            "word": "scent"
+            "definition": "scent",
+            "word": "香り"
         },
         {
             "id": 90,
-            "definition": "仮定する",
-            "word": "suppose"
+            "definition": "suppose",
+            "word": "仮定する"
         },
         {
             "id": 91,
-            "definition": "小冊子",
-            "word": "brochure"
+            "definition": "brochure",
+            "word": "小冊子"
         },
         {
             "id": 92,
-            "definition": "穏やかな",
-            "word": "calm"
+            "definition": "calm",
+            "word": "穏やかな"
         },
         {
             "id": 93,
-            "definition": "授業料",
-            "word": "tuition"
+            "definition": "tuition",
+            "word": "授業料"
         },
         {
             "id": 94,
-            "definition": "裁判",
-            "word": "trial"
+            "definition": "trial",
+            "word": "裁判"
         },
         {
             "id": 95,
-            "definition": "田舎",
-            "word": "countryside"
+            "definition": "countryside",
+            "word": "田舎"
         },
         {
             "id": 96,
-            "definition": "事務員",
-            "word": "clerk"
+            "definition": "clerk",
+            "word": "事務員"
         },
         {
             "id": 97,
-            "definition": "独立",
-            "word": "independence"
+            "definition": "independence",
+            "word": "独立"
         },
         {
             "id": 98,
-            "definition": "過去",
-            "word": "past"
+            "definition": "past",
+            "word": "過去"
         },
         {
             "id": 99,
-            "definition": "彫像",
-            "word": "sculpture"
+            "definition": "sculpture",
+            "word": "彫像"
         },
         {
             "id": 100,
-            "definition": "生息域",
-            "word": "habitat"
+            "definition": "habitat",
+            "word": "生息域"
         }
     ]
 }
