@@ -3,178 +3,503 @@
     "questions": [
         {
             "id": 1,
-            "definition": "yearly",
-            "word": "annual"
+            "definition": "提供する",
+            "word": "provide"
         },
         {
             "id": 2,
-            "definition": "to mix",
-            "word": "combine"
+            "definition": "商人",
+            "word": "merchant"
         },
         {
             "id": 3,
-            "definition": "to design or create",
-            "word": "develop"
+            "definition": "針",
+            "word": "needle"
         },
         {
             "id": 4,
-            "definition": "a show of how you think or feel",
-            "word": "expression"
+            "definition": "締める",
+            "word": "fasten"
         },
         {
             "id": 5,
-            "definition": "known to you",
-            "word": "familiar"
+            "definition": "精神の",
+            "word": "mental"
         },
         {
             "id": 6,
-            "definition": "opportunity",
-            "word": "possibility"
+            "definition": "反対する",
+            "word": "object"
         },
         {
             "id": 7,
-            "definition": "relating to a job that requires training or education",
-            "word": "professional"
+            "definition": "生産する",
+            "word": "produce"
         },
         {
             "id": 8,
-            "definition": "how good something is",
-            "word": "quality"
+            "definition": "進展",
+            "word": "progress"
         },
         {
             "id": 9,
-            "definition": "clearly defined",
-            "word": "specific"
+            "definition": "終わった",
+            "word": "finished"
         },
         {
             "id": 10,
-            "definition": "a type of work that you are trained to do such as plumbing, construction, etc.",
-            "word": "trade"
+            "definition": "酸素",
+            "word": "oxygen"
         },
         {
             "id": 11,
-            "definition": "relating to sound",
-            "word": "acoustic"
+            "definition": "生きている",
+            "word": "alive"
         },
         {
             "id": 12,
-            "definition": "進歩する",
-            "word": "advance"
+            "definition": "所有する",
+            "word": "own"
         },
         {
             "id": 13,
-            "definition": "the process of making films that have pictures or objects that seem to move",
-            "word": "animation"
+            "definition": "推薦する",
+            "word": "recommend"
         },
         {
             "id": 14,
-            "definition": "objects that were made in the past and are important to history",
-            "word": "artifact"
+            "definition": "外交",
+            "word": "diplomacy"
         },
         {
             "id": 15,
-            "definition": "利用できる、求めに応じられる",
-            "word": "available"
+            "definition": "降雨",
+            "word": "rainfall"
         },
         {
             "id": 16,
-            "definition": "average",
-            "word": "average"
+            "definition": "上がる",
+            "word": "rise"
         },
         {
             "id": 17,
-            "definition": "～を確かめる",
-            "word": "check out"
+            "definition": "賞賛に値する",
+            "word": "admirable"
         },
         {
             "id": 18,
-            "definition": "コンピュータ(使用)の",
-            "word": "computing"
+            "definition": "構造",
+            "word": "structure"
         },
         {
             "id": 19,
-            "definition": "建設",
-            "word": "construction"
+            "definition": "階上へ",
+            "word": "upstairs"
         },
         {
             "id": 20,
-            "definition": "定義する、限定する、明らかにする",
-            "word": "define"
+            "definition": "観測所",
+            "word": "observatory"
         },
         {
             "id": 21,
-            "definition": "開発者",
-            "word": "developer"
+            "definition": "草食動物",
+            "word": "herbivore"
         },
         {
             "id": 22,
-            "definition": "教育",
-            "word": "education"
+            "definition": "運動する",
+            "word": "exercise"
         },
         {
             "id": 23,
-            "definition": "産業の",
-            "word": "industrial"
+            "definition": "溶岩",
+            "word": "lava"
         },
         {
             "id": 24,
-            "definition": "投資する",
-            "word": "invest"
+            "definition": "領地",
+            "word": "territory"
         },
         {
             "id": 25,
-            "definition": "知識",
-            "word": "knowledge"
+            "definition": "想像する",
+            "word": "imagine"
         },
         {
             "id": 26,
-            "definition": "確かめる",
-            "word": "make sure"
+            "definition": "使用法",
+            "word": "usage"
         },
         {
             "id": 27,
-            "definition": "機会、好機",
-            "word": "opportunity"
+            "definition": "穀物",
+            "word": "grain"
         },
         {
             "id": 28,
-            "definition": "情熱、強い好み",
-            "word": "passion"
+            "definition": "採用する",
+            "word": "adopt"
         },
         {
             "id": 29,
-            "definition": "物理学",
-            "word": "physics"
+            "definition": "投資",
+            "word": "investment"
         },
         {
             "id": 30,
-            "definition": "配管工事",
-            "word": "plumbing"
+            "definition": "申し入れ",
+            "word": "proposal"
         },
         {
             "id": 31,
-            "definition": "過程",
-            "word": "process"
+            "definition": "道具",
+            "word": "tool"
         },
         {
             "id": 32,
-            "definition": "修繕する、修理する",
-            "word": "repair"
+            "definition": "振動",
+            "word": "vibration"
         },
         {
             "id": 33,
+            "definition": "前の",
+            "word": "previous"
+        },
+        {
+            "id": 34,
+            "definition": "扱い",
+            "word": "treatment"
+        },
+        {
+            "id": 35,
+            "definition": "はさみ",
+            "word": "scissors"
+        },
+        {
+            "id": 36,
+            "definition": "暖炉",
+            "word": "fireplace"
+        },
+        {
+            "id": 37,
+            "definition": "人々",
+            "word": "folk"
+        },
+        {
+            "id": 38,
+            "definition": "巻き込む",
+            "word": "involve"
+        },
+        {
+            "id": 39,
+            "definition": "詩人",
+            "word": "poet"
+        },
+        {
+            "id": 40,
+            "definition": "乗客",
+            "word": "passenger"
+        },
+        {
+            "id": 41,
+            "definition": "賃金",
+            "word": "wage"
+        },
+        {
+            "id": 42,
+            "definition": "先祖",
+            "word": "ancestor"
+        },
+        {
+            "id": 43,
+            "definition": "さえぎる",
+            "word": "interrupt"
+        },
+        {
+            "id": 44,
+            "definition": "銀行",
+            "word": "bank"
+        },
+        {
+            "id": 45,
+            "definition": "回復する",
+            "word": "recover"
+        },
+        {
+            "id": 46,
+            "definition": "刻む",
+            "word": "carve"
+        },
+        {
+            "id": 47,
+            "definition": "叫ぶ",
+            "word": "exclaim"
+        },
+        {
+            "id": 48,
+            "definition": "ハーブ",
+            "word": "herb"
+        },
+        {
+            "id": 49,
+            "definition": "躊躇する",
+            "word": "hesitate"
+        },
+        {
+            "id": 50,
+            "definition": "X線",
+            "word": "X-ray"
+        },
+        {
+            "id": 51,
+            "definition": "草",
+            "word": "grass"
+        },
+        {
+            "id": 52,
+            "definition": "着手する",
+            "word": "undertake"
+        },
+        {
+            "id": 53,
+            "definition": "認識する",
+            "word": "recognize"
+        },
+        {
+            "id": 54,
+            "definition": "成し遂げる",
+            "word": "accomplish"
+        },
+        {
+            "id": 55,
+            "definition": "好きな",
+            "word": "fond"
+        },
+        {
+            "id": 56,
+            "definition": "傾向がある",
+            "word": "tend"
+        },
+        {
+            "id": 57,
+            "definition": "議論",
+            "word": "discussion"
+        },
+        {
+            "id": 58,
+            "definition": "湿気のある",
+            "word": "humid"
+        },
+        {
+            "id": 59,
+            "definition": "島",
+            "word": "island"
+        },
+        {
+            "id": 60,
+            "definition": "永久的な",
+            "word": "permanent"
+        },
+        {
+            "id": 61,
+            "definition": "学者",
+            "word": "scholar"
+        },
+        {
+            "id": 62,
+            "definition": "後ほど",
+            "word": "later"
+        },
+        {
+            "id": 63,
+            "definition": "洗練された",
+            "word": "fine"
+        },
+        {
+            "id": 64,
+            "definition": "炭素",
+            "word": "carbon"
+        },
+        {
+            "id": 65,
+            "definition": "決定",
+            "word": "decision"
+        },
+        {
+            "id": 66,
+            "definition": "広い",
+            "word": "broad"
+        },
+        {
+            "id": 67,
+            "definition": "凍る",
+            "word": "freeze"
+        },
+        {
+            "id": 68,
+            "definition": "創造的な",
+            "word": "creative"
+        },
+        {
+            "id": 69,
+            "definition": "さらに",
+            "word": "furthermore"
+        },
+        {
+            "id": 70,
+            "definition": "十分な",
+            "word": "sufficient"
+        },
+        {
+            "id": 71,
+            "definition": "豊富な",
+            "word": "affluent"
+        },
+        {
+            "id": 72,
+            "definition": "増加する",
+            "word": "increase"
+        },
+        {
+            "id": 73,
+            "definition": "にこやかに",
+            "word": "cheerfully"
+        },
+        {
+            "id": 74,
+            "definition": "ほとんど",
+            "word": "nearly"
+        },
+        {
+            "id": 75,
+            "definition": "水をやる",
+            "word": "water"
+        },
+        {
+            "id": 76,
+            "definition": "技能",
+            "word": "skill"
+        },
+        {
+            "id": 77,
+            "definition": "病気",
+            "word": "illness"
+        },
+        {
+            "id": 78,
+            "definition": "投票する",
+            "word": "vote"
+        },
+        {
+            "id": 79,
+            "definition": "のこぎり",
+            "word": "saw"
+        },
+        {
+            "id": 80,
+            "definition": "本当に",
+            "word": "indeed"
+        },
+        {
+            "id": 81,
             "definition": "要求する",
             "word": "require"
         },
         {
-            "id": 34,
-            "definition": "科学の",
-            "word": "scientific"
+            "id": 82,
+            "definition": "記述する",
+            "word": "describe"
         },
         {
-            "id": 35,
-            "definition": "彫刻",
+            "id": 83,
+            "definition": "小包",
+            "word": "parcel"
+        },
+        {
+            "id": 84,
+            "definition": "明らかな",
+            "word": "apparent"
+        },
+        {
+            "id": 85,
+            "definition": "公式の",
+            "word": "official"
+        },
+        {
+            "id": 86,
+            "definition": "海軍",
+            "word": "navy"
+        },
+        {
+            "id": 87,
+            "definition": "署名する",
+            "word": "sign"
+        },
+        {
+            "id": 88,
+            "definition": "匂い",
+            "word": "odor"
+        },
+        {
+            "id": 89,
+            "definition": "香り",
+            "word": "scent"
+        },
+        {
+            "id": 90,
+            "definition": "仮定する",
+            "word": "suppose"
+        },
+        {
+            "id": 91,
+            "definition": "小冊子",
+            "word": "brochure"
+        },
+        {
+            "id": 92,
+            "definition": "穏やかな",
+            "word": "calm"
+        },
+        {
+            "id": 93,
+            "definition": "授業料",
+            "word": "tuition"
+        },
+        {
+            "id": 94,
+            "definition": "裁判",
+            "word": "trial"
+        },
+        {
+            "id": 95,
+            "definition": "田舎",
+            "word": "countryside"
+        },
+        {
+            "id": 96,
+            "definition": "事務員",
+            "word": "clerk"
+        },
+        {
+            "id": 97,
+            "definition": "独立",
+            "word": "independence"
+        },
+        {
+            "id": 98,
+            "definition": "過去",
+            "word": "past"
+        },
+        {
+            "id": 99,
+            "definition": "彫像",
             "word": "sculpture"
+        },
+        {
+            "id": 100,
+            "definition": "生息域",
+            "word": "habitat"
         }
     ]
 }
